@@ -6,7 +6,6 @@ namespace SiteTest
 {
     public static class DriverFactory
     {
-        // for another browser
         public static IWebDriver CreateDriver(string browser)
         {
             if (browser == "firefox")
