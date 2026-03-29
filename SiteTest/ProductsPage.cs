@@ -18,12 +18,6 @@ namespace SiteTest
         private IReadOnlyCollection<IWebElement> FavoriteButtons =>
             driver.FindElements(By.XPath("//span[contains(@class, 'absolute') and contains(@class, 'top-3')]//button"));
 
-        private IWebElement UserMenuButton =>
-            Wait().Until(d => d.FindElement(By.XPath("//button[.//span[contains(@class, 'user-name')]]")));
-
-        private IWebElement FavoritesLink =>
-            Wait().Until(d => d.FindElement(By.XPath("//div[contains(text(), 'Favorites')]")));
-
         public void WaitForProductsLoaded()
         {
             Wait().Until(d => d.FindElements(By.XPath("//span[starts-with(text(), '$')]")).Count > 0);

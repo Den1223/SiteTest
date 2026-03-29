@@ -1,6 +1,5 @@
 ﻿using NLog;
 using OpenQA.Selenium;
-using System;
 
 namespace SiteTest
 {
