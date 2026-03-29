@@ -23,7 +23,6 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
-	
 	<ItemGroup>
 		<None Update="NLog.config" CopyToOutputDirectory="PreserveNewest" />
 		<Content Include="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
