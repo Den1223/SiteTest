@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
 
-namespace SiteTest
+namespace SiteTest.Tests
 {
     public class FavoriteTests : BaseTest
     {
@@ -25,17 +25,14 @@ namespace SiteTest
 
             productsPage.ClickFavoriteOnProduct(0);
             Logger.Info($"Favorited product at index 0: {allProducts[0]}");
-            Thread.Sleep(2000);
 
             productsPage.ClickFavoriteOnProduct(1);
             Logger.Info($"Favorited product at index 1: {allProducts[1]}");
-            Thread.Sleep(2000);
 
             var favoritedNames = new List<string> { allProducts[0], allProducts[1] };
 
             productsPage.OpenFavorites();
             Logger.Info("Navigated to Favorites page");
-            Thread.Sleep(1000);
 
             var favoritesPage = new FavoritesPage(driver);
             favoritesPage.HasProducts().Should().BeTrue("Favorites page should contain products");

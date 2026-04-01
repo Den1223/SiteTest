@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
 
-namespace SiteTest
+namespace SiteTest.Tests
 {
     public class LoginTests : BaseTest
     {

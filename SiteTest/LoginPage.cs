@@ -41,7 +41,6 @@ namespace SiteTest
                 catch (WebDriverTimeoutException) when (attempt < 2)
                 {
                     driver.Navigate().Refresh();
-                    Thread.Sleep(2000);
                 }
             }
         }

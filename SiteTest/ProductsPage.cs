@@ -30,7 +30,6 @@ namespace SiteTest
             if (index < buttons.Count)
             {
                 js.ExecuteScript("arguments[0].scrollIntoView(true);", buttons[index]);
-                Thread.Sleep(300);
                 js.ExecuteScript("arguments[0].click();", buttons[index]);
             }
         }
@@ -42,19 +41,16 @@ namespace SiteTest
             var dropdown = Wait().Until(d =>
                 d.FindElement(By.XPath("//p[text()='Order by']/..//button")));
             js.ExecuteScript("arguments[0].scrollIntoView(true);", dropdown);
-            Thread.Sleep(300);
             js.ExecuteScript("arguments[0].click();", dropdown);
-            Thread.Sleep(1000);
 
             var optionElement = Wait().Until(d => d.FindElement(By.XPath($"//div[contains(text(), '{option}')]")));
             js.ExecuteScript("arguments[0].click();", optionElement);
-            Thread.Sleep(1500);
+            Thread.Sleep(300);
         }
 
         public void OpenFavorites()
         {
             driver.Navigate().GoToUrl("https://practice.qabrains.com/ecommerce/favorites");
-            Thread.Sleep(1000);
         }
 
         public List<string> GetProductNames()

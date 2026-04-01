@@ -28,4 +28,9 @@
 		<Content Include="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Config\" />
+	  <Folder Include="Pages\" />
+	</ItemGroup>
+
 </Project>
