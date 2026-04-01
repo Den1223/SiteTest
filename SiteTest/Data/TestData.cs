@@ -1,4 +1,4 @@
-﻿namespace SiteTest
+﻿namespace SiteTest.Data
 {
     public static class TestData
     {
@@ -18,6 +18,15 @@
             Add("wronguser@test.com", "WrongPass1");
             Add("invalid@email.com", "123456");
             Add("notregistered@example.com", "Password999");
+        }
+    }
+
+    public class BrowserData : TheoryData<string>
+    {
+        public BrowserData()
+        {
+            Add("chrome");
+            Add("firefox");
         }
     }
 }
